@@ -8,6 +8,6 @@ function App() {
       <HeaderComponent />
     </>
   );
-}
+};
 
 export default App;
