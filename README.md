@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+renderizar header general
 
-## Available Scripts
+renderizar las distintas páginas en funcion de su router link
 
-In the project directory, you can run:
+renderizar nav bar general
 
-### `npm start`
+## Home page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+renderizar las 4 opciones de filtro predefinidas (componente Filtro tipo de bebida)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## List online items page
 
-### `npm test`
+renderizar componente de paginación
+renderizar componente lista de bebidas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Favorite list page
 
-### `npm run build`
+renderizar componente de paginación
+renderizar componente lista de bebidas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Detail page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+renderizar componente detalle de bebida
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Form page
 
-### `npm run eject`
+renderizar el componente formulario
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Error404 page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+renderizar el error 404 al no encontar una url
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### componente filtro de bebida
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+renderizar una tarjeta con la imagen y el texto recibido
 
-## Learn More
+### componente paginacion
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+renderizar los botones de next page y last page.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### componente lista de bebidas
 
-### Code Splitting
+renderizar tantas tarjetas de bebida como elementos reciba
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### componente tarjeta de bebida
 
-### Analyzing the Bundle Size
+renderizar tarjeta de bebida con la imagen y textos recibidos y el icono en funcion de la página a la que pertenezca
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### componente detalle de bebida
 
-### Making a Progressive Web App
+renderizar la imagen recibida, textos recibidos, lista de ingredientes recibidos, boton de agregar a mi lista, boton de editar (agregará a mi lista automaticamente)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### componente formulario
 
-### Advanced Configuration
+renderizar los distintos inputs y checkbox del formulario
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### componente loading
 
-### Deployment
+renderizar el loading para el retraso en la carga de información
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### componente toast
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+renderizar un toast con el texto recibido
