@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderComponentStyles = styled.header`
+const HeaderStyles = styled.header`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
   height: 150px;
@@ -32,4 +32,4 @@ const HeaderComponentStyles = styled.header`
   }
 `;
 
-export default HeaderComponentStyles;
+export default HeaderStyles;
