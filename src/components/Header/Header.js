@@ -1,8 +1,8 @@
-import HeaderComponentStyles from "./HeaderComponentStyles";
+import HeaderStyles from "./HeaderStyles";
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
-    <HeaderComponentStyles>
+    <HeaderStyles>
       <div className="info__header">
         <img src="/images/logo-supersimple.png" alt="Logotipo " />
         <div className="seacher">
@@ -10,8 +10,8 @@ const HeaderComponent = () => {
           <input type="text" />
         </div>
       </div>
-    </HeaderComponentStyles>
+    </HeaderStyles>
   );
 };
 
-export default HeaderComponent;
+export default Header;

@@ -1,13 +1,15 @@
 import AppStyles from "./AppStyles";
-import HeaderComponent from "./HeaderComponent/HeaderComponent";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
       <AppStyles />
-      <HeaderComponent />
+      <Header />
+      <Navbar />
     </>
   );
-};
+}
 
 export default App;
