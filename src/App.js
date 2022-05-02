@@ -1,8 +1,12 @@
-const App = () => {
+import AppStyles from "./AppStyles";
+import HeaderComponent from "./HeaderComponent/HeaderComponent";
+
+function App() {
   return (
-    <div className="App">
-      <p>Work in progress</p>
-    </div>
+    <>
+      <AppStyles />
+      <HeaderComponent />
+    </>
   );
 };
 
