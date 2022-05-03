@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyles = styled.button`
+const ButtonStyled = styled.button`
   background-color: inherit;
   border: none;
   img {
@@ -9,4 +9,4 @@ const ButtonStyles = styled.button`
   }
 `;
 
-export default ButtonStyles;
+export default ButtonStyled;
