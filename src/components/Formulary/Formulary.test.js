@@ -9,6 +9,7 @@ describe("Given a Formulary component", () => {
       render(<Formulary />);
 
       const expectedResult = screen.getByText(text);
+
       expect(expectedResult).toBeInTheDocument();
     });
   });
