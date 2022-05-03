@@ -123,6 +123,7 @@ const Formulary = () => {
         value=""
         placeholder="Ingredient measure"
       ></input>
+      <input type="submit" value="Save Cocktail"></input>
     </FormularyStyled>
   );
 };

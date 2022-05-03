@@ -7,6 +7,7 @@ const FormularyStyled = styled.form`
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   gap: 20px;
+  margin-bottom: 150px;
 
   input,
   select,
