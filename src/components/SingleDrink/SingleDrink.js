@@ -1,20 +1,29 @@
 import Button from "../Button/Button";
+import SingleDrinkStyled from "./SingleDrinkStyled";
 
 const SingleDrink = ({
   name,
   category,
   image,
   action,
-  altDescription,
-  source,
+  buttonAction,
+  buttonSource,
+  buttonAltDescription,
+  idKey,
 }) => {
   return (
-    <div>
-      <img src={image} alt={name} />
-      <h2 className="drink-name">{name}</h2>
-      <p className="drink-category">{category}</p>
-      <Button action={action} altDescription={altDescription} source={source} />
-    </div>
+    <SingleDrinkStyled onClick={action} key={idKey}>
+      <img className="drink-image" src={image} alt={name} />
+      <div className="drink-info">
+        <h2 className="drink-name">{name}</h2>
+        <p className="drink-category">{category}</p>
+      </div>
+      <Button
+        altDescription={buttonAltDescription}
+        source={buttonSource}
+        action={buttonAction}
+      />
+    </SingleDrinkStyled>
   );
 };
 
