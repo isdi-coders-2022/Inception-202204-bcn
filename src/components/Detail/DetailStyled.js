@@ -28,6 +28,26 @@ const DetailStyled = styled.div`
       flex-direction: column;
     }
   }
+  .detail-extended {
+    margin-top: 20px;
+    &__description {
+      margin-bottom: 20px;
+    }
+    &__ingredients {
+      list-style: none;
+      padding: 0;
+      li {
+        background-color: #45465f;
+        padding: 5px;
+        margin: 10px 0;
+      }
+    }
+  }
+  .detail-edit {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
 `;
 
 export default DetailStyled;

@@ -45,8 +45,8 @@ const Detail = ({
         ></Button>
       </section>
       <section className="detail-extended">
-        <p>{strInstructions}</p>
-        <ul>
+        <p className="detail-extended__description">{strInstructions}</p>
+        <ul className="detail-extended__ingredients">
           <li>{strIngredient1}</li>
           <li>{strIngredient2}</li>
           <li>{strIngredient3}</li>
@@ -57,6 +57,7 @@ const Detail = ({
         </ul>
       </section>
       <Button
+        className="detail-edit"
         action={action2}
         altDescription="Edit"
         source="public\images\edit.icon.svg"
