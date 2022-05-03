@@ -8,6 +8,7 @@ const AppStyles = createGlobalStyle`
 
 body{
   background-color: #11001c;
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 `;

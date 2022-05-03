@@ -1,3 +1,4 @@
+import DetailStyled from "./DetailStyled";
 import Button from "../Button/Button";
 
 const Detail = ({
@@ -17,19 +18,19 @@ const Detail = ({
     strIngredient7,
   },
   action1,
-  altDescription1,
-  source1,
   action2,
-  altDescription2,
-  source2,
 }) => {
   return (
-    <>
-      <section>
-        <img src={strDrinkThumb} alt={strDrink} />
-        <section>
+    <DetailStyled>
+      <section className="detail-main">
+        <img
+          className="detail-main__image"
+          src={strDrinkThumb}
+          alt={strDrink}
+        />
+        <section className="detail-main__cocktail-section">
           <h2>{strDrink}</h2>
-          <ul>
+          <ul className="detail-main__categories">
             <li>{strCategory}</li>
             <li>{strAlcoholic}</li>
             <li>{strGlass}</li>
@@ -37,26 +38,29 @@ const Detail = ({
         </section>
         <Button
           action={action1}
-          altDescription={altDescription1}
-          source={source1}
+          altDescription="Favourite"
+          source="public\images\favourites_icon.svg"
         ></Button>
       </section>
-      <p>{strInstructions}</p>
-      <ul>
-        <li>{strIngredient1}</li>
-        <li>{strIngredient2}</li>
-        <li>{strIngredient3}</li>
-        <li>{strIngredient4}</li>
-        <li>{strIngredient5}</li>
-        <li>{strIngredient6}</li>
-        <li>{strIngredient7}</li>
-      </ul>
+      <section className="detail-extended">
+        <p className="detail-extended__description">{strInstructions}</p>
+        <ul className="detail-extended__ingredients">
+          <li>{strIngredient1}</li>
+          <li>{strIngredient2}</li>
+          <li>{strIngredient3}</li>
+          <li>{strIngredient4}</li>
+          <li>{strIngredient5}</li>
+          <li>{strIngredient6}</li>
+          <li>{strIngredient7}</li>
+        </ul>
+      </section>
       <Button
+        className="detail-edit"
         action={action2}
-        altDescription={altDescription2}
-        source={source2}
+        altDescription="Edit"
+        source="public\images\edit.icon.svg"
       ></Button>
-    </>
+    </DetailStyled>
   );
 };
 
