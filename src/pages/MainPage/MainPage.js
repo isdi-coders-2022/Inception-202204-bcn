@@ -1,4 +1,4 @@
-import MainDrinkFilter from "../MainDrinkFilter/MainDrinkFilter";
+import MainDrinkFilter from "../../components/MainDrinkFilter/MainDrinkFilter";
 import MainPageStyled from "./MainPageStyled";
 
 const MainPage = () => {

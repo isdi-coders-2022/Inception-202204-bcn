@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MainPage from "./MainPage";
-import MainDrinkFilter from "../MainDrinkFilter/MainDrinkFilter";
+import MainDrinkFilter from "../../components/MainDrinkFilter/MainDrinkFilter";
 
 describe("Given a MainPage function", () => {
   describe("When it is invoked 1 time", () => {

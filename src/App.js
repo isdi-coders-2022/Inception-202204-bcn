@@ -8,7 +8,15 @@ function App() {
     <>
       <AppStyles />
       <Header />
-      <ListPage items={["hola", "esto", "es", "una", "prueba"]} />
+      <ListPage
+        items={[
+          {
+            strDrink: "Bernat",
+            strCategory: "Alcoholic",
+            strDrinkThumb: "public/images/home_icon.svg",
+          },
+        ]}
+      />
       <Navbar />
     </>
   );
