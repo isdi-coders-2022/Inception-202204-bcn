@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import DetailStyled from "./DetailStyled";
 
 const Detail = ({
   drink: {
@@ -24,7 +25,7 @@ const Detail = ({
   source2,
 }) => {
   return (
-    <>
+    <DetailStyled>
       <section>
         <img src={strDrinkThumb} alt={strDrink} />
         <section>
@@ -56,7 +57,7 @@ const Detail = ({
         altDescription={altDescription2}
         source={source2}
       ></Button>
-    </>
+    </DetailStyled>
   );
 };
 
