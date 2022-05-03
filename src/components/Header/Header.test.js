@@ -8,7 +8,9 @@ describe("Given a Header component", () => {
 
       render(<Header />);
 
-      expect(image).not.toBeNull();
+      const expectedImageRendered = screen.getByRole("img");
+
+      expect(expectedImageRendered.src).toContain(image);
     });
 
     test("Then it shoul render a text 'Search Cocktail:'", () => {
