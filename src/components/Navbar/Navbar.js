@@ -1,4 +1,3 @@
-import { useHref } from "react-router-dom";
 import NavbarStyles from "./NavbarStyles";
 
 const Navbar = () => {
