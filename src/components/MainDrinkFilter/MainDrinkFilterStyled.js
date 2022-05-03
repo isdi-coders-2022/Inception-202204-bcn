@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const MainDrinkFilterStyles = styled.li`
   list-style-type: none;
-  width: 225px;
+  width: 320px;
   height: 120px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid black;
   overflow: hidden;
   display: inline-block;
