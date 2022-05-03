@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import SingleDrink from "./SingleDrink";
 
@@ -14,16 +15,16 @@ describe("Given SingleDrink component", () => {
     });
     test("Then it should render a list item", () => {
       render(<SingleDrink item={drink} />);
-      const testListItem = screen.getAllByRole("listitem");
+      const testListItem = screen.getByRole("listitem");
 
-      expect(testListItem).not.toBeNull();
+      expect(testListItem).toBeInTheDocument();
     });
 
     test("Then it should render a list item which contains the text 'alcoholic' in paragraph", () => {
       render(<SingleDrink item={drink} />);
-      const textParagraph = screen.getByText("alcoholic").textContent;
+      const textParagraph = screen.getByText("alcoholic");
 
-      expect(textParagraph).toContain(drink.strCategory);
+      expect(textParagraph).toBeInTheDocument();
     });
   });
 });
