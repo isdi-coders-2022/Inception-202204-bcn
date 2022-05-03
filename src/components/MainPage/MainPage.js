@@ -1,9 +1,9 @@
 import MainDrinkFilter from "../MainDrinkFilter/MainDrinkFilter";
-import MainPageStyles from "./MainPageStyled";
+import MainPageStyled from "./MainPageStyled";
 
 const MainPage = () => {
   return (
-    <MainPageStyles>
+    <MainPageStyled>
       <MainDrinkFilter
         text={"Alcoholic"}
         image="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg"
@@ -20,7 +20,7 @@ const MainPage = () => {
         text={"Latest drinks"}
         image="https://www.thecocktaildb.com/images/media/drink/yk70e31606771240.jpg"
       />
-    </MainPageStyles>
+    </MainPageStyled>
   );
 };
 

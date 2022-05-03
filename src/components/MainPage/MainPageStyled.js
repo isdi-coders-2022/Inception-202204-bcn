@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainPageStyles = styled.ul`
+const MainPageStyled = styled.ul`
   padding-left: 0;
   height: 75vh;
   display: flex;
@@ -10,4 +10,4 @@ const MainPageStyles = styled.ul`
   gap: 30px;
 `;
 
-export default MainPageStyles;
+export default MainPageStyled;
