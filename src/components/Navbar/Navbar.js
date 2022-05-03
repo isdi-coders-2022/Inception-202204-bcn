@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import NavbarStyles from "./NavbarStyles";
 
 const Navbar = () => {
   return (
     <NavbarStyles>
-      <a href="ListPage">
+      <Link to="list-page">
         <img src="/images/favourites_icon.svg" alt="" />
-      </a>
-      <a href="MainPage">
+      </Link>
+      <Link to="main-page">
         <img src="/images/home_icon.svg" alt="" />
-      </a>
-      <a href="FormPage">
+      </Link>
+      <Link to="form-page">
         <img src="/images/add_icon.svg" alt="" />
-      </a>
+      </Link>
     </NavbarStyles>
   );
 };
