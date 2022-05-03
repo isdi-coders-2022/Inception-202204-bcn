@@ -119,7 +119,9 @@ const Formulary = () => {
         name="measure5"
         placeholder="Ingredient measure"
       ></input>
-      <input type="submit" value="Save Cocktail"></input>
+      <button type="submit" value="Save Cocktail">
+        Save Cocktail
+      </button>
     </FormularyStyled>
   );
 };
