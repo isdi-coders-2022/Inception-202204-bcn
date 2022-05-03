@@ -18,8 +18,6 @@ const Detail = ({
     strIngredient7,
   },
   action1,
-  altDescription1,
-  source1,
   action2,
 }) => {
   return (
