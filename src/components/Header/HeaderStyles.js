@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const HeaderStyles = styled.header`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
   height: 150px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: #11001c;
   color: #fff;
+  padding: 20px;
 
   .info__header {
     margin: 0 auto;
@@ -17,7 +17,6 @@ const HeaderStyles = styled.header`
   img {
     width: 140px;
     height: 70px;
-    margin-top: 20px;
   }
   .seacher {
     display: flex;
@@ -26,8 +25,9 @@ const HeaderStyles = styled.header`
     input {
       border-radius: 40px;
       height: 30px;
-      width: 120px;
+      width: 50%;
       text-align: center;
+      margin-left: 6%;
     }
   }
 `;
