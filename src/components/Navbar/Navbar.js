@@ -3,13 +3,13 @@ import NavbarStyles from "./NavbarStyles";
 const Navbar = () => {
   return (
     <NavbarStyles>
-      <a href="navbar-button">
+      <a href="ListPage">
         <img src="/images/favourites_icon.svg" alt="" />
       </a>
-      <a href="navbar-button">
+      <a href="MainPage">
         <img src="/images/home_icon.svg" alt="" />
       </a>
-      <a href="navbar-button">
+      <a href="FormPage">
         <img src="/images/add_icon.svg" alt="" />
       </a>
     </NavbarStyles>
