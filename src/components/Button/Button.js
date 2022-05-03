@@ -1,10 +1,10 @@
-import ButtonStyles from "./ButtonStyled";
+import ButtonStyled from "./ButtonStyled";
 
 const Button = ({ action, altDescription, source }) => {
   return (
-    <ButtonStyles onClick={action}>
+    <ButtonStyled onClick={action}>
       <img src={source} alt={altDescription} />
-    </ButtonStyles>
+    </ButtonStyled>
   );
 };
 
