@@ -2,17 +2,14 @@ import Button from "../Button/Button";
 import SingleDrinkStyled from "./SingleDrinkStyled";
 
 const SingleDrink = ({
-  name,
-  category,
-  image,
+  item: { strDrink: name, strCategory: category, strDrinkThumb: image },
   action,
   buttonAction,
   buttonSource,
   buttonAltDescription,
-  idKey,
 }) => {
   return (
-    <SingleDrinkStyled onClick={action} key={idKey}>
+    <SingleDrinkStyled onClick={action}>
       <img className="drink-image" src={image} alt={name} />
       <div className="drink-info">
         <h2 className="drink-name">{name}</h2>
