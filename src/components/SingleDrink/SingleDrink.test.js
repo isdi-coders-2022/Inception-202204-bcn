@@ -22,7 +22,7 @@ describe("Given SingleDrink component", () => {
 
     test("Then it should render a list item which contains the text 'alcoholic' in paragraph", () => {
       render(<SingleDrink item={drink} />);
-      const textParagraph = screen.getByText("alcoholic");
+      const textParagraph = screen.getByText(drink.strCategory);
 
       expect(textParagraph).toBeInTheDocument();
     });
