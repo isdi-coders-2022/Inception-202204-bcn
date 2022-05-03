@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/MainPage" element={<MainPage />} />
+        <Route path="/main-page" element={<MainPage />} />
         <Route
-          path="/ListPage"
+          path="/list-page"
           element={
             <ListPage
               items={[
