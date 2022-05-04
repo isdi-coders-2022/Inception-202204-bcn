@@ -1,4 +1,4 @@
-import AppContext from "./context";
+import AppContext from "./AppContext";
 
 const AppProvider = ({ children }) => {
   return <AppContext.Provider value={3}>{children}</AppContext.Provider>;

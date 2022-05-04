@@ -1,5 +1,5 @@
 import Formulary from "../../components/Formulary/Formulary";
-import FomrPageStyles from "./FormPage.styles";
+import FomrPageStyles from "./FormPageStyles";
 
 const FormPage = () => {
   return (
