@@ -1,7 +1,9 @@
 import SingleDrink from "../../components/SingleDrink/SingleDrink";
+import Fetch from "../../fetch";
 import ListPageStyles from "./ListPageStyles";
 
 const ListPage = ({ items }) => {
+  Fetch();
   return (
     <ListPageStyles>
       <ol>
