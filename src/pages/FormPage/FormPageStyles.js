@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const FomrPageStyles = styled.div`
+const FomrmPageStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-export default FomrPageStyles;
+export default FomrmPageStyles;
