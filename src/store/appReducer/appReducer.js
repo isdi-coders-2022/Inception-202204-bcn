@@ -1,4 +1,4 @@
-import DrinkActionTypes from "../actions/DrinkActionTypes";
+import DrinkActionTypes from "../actions/newDrinkActionType";
 
 const appReducer = (currentState, action) => {
   let newState;
