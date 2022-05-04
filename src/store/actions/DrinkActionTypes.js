@@ -1,4 +1,4 @@
-const DrinkActionTypes = {
+export const drinkActionTypes = {
   deleteDrinkActionType: "delete-drink",
   addDrinkActionType: "add-drink",
   editDrinkActionType: "edit-drink",
@@ -7,5 +7,3 @@ const DrinkActionTypes = {
   loadMostPopularDrinksActionType: "load-most-popular-drinks",
   loadLatestDrinksActionType: "load-latest-drinks",
 };
-
-export default DrinkActionTypes;
