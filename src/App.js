@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import MainPage from "./pages/MainPage/MainPage";
 import ListPage from "./pages/ListPage/ListPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import FormPage from "./pages/FormPage/FormPage";
 
 function App() {
@@ -14,17 +14,19 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/main-page" element={<MainPage />} />
-        <Route path="/formulary" element={<FormPage />} />
+        <Route path="/main-page" element={<Navigate replace to="/" />} />
+        <Route exact path="/drink-modification" element={<FormPage />} />
         <Route
+          exact
           path="/list-page"
           element={
             <ListPage
               items={[
                 {
-                  strDrink: "Bernat",
+                  strDrink: "Margarita",
                   strCategory: "Alcoholic",
-                  strDrinkThumb: "/images/home_icon.svg",
+                  strDrinkThumb:
+                    "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
                 },
               ]}
             />
