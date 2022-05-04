@@ -1,36 +1,44 @@
-import DrinkActionTypes from "./DrinkActionTypes";
+import {
+  addDrinkActionType,
+  deleteDrinkActionType,
+  editDrinkActionType,
+  loadAlcoholicDrinksActionType,
+  loadLatestDrinksActionType,
+  loadMostPopularDrinksActionType,
+  loadNonAlcoholicDrinksActionType,
+} from "./newDrinkActionType";
 
 export const addDrinkActionCreation = (drink) => ({
-  type: DrinkActionTypes.addDrinkActionType,
+  type: addDrinkActionType,
   drink,
 });
 
 export const deleteDrinkActionCreation = (id) => ({
-  type: DrinkActionTypes.deleteDrinkActionType,
+  type: deleteDrinkActionType,
   id,
 });
 
 export const editDrinkActionCreation = (drink) => ({
-  type: DrinkActionTypes.editDrinkActionType,
+  type: editDrinkActionType,
   drink,
 });
 
 export const loadAlcoholicDrinksActionCreation = (drinks) => ({
-  type: DrinkActionTypes.loadAlcoholicDrinksActionType,
+  type: loadAlcoholicDrinksActionType,
   drinks,
 });
 
 export const loadNonAlcoholicDrinksActionCreation = (drinks) => ({
-  type: DrinkActionTypes.loadNonAlcoholicDrinksActionType,
+  type: loadNonAlcoholicDrinksActionType,
   drinks,
 });
 
 export const loadMostPopularActionCreation = (drinks) => ({
-  type: DrinkActionTypes.loadMostPopularDrinksActionType,
+  type: loadMostPopularDrinksActionType,
   drinks,
 });
 
 export const loadLatestDrinksActionCreation = (drinks) => ({
-  type: DrinkActionTypes.loadLatestDrinksActionType,
+  type: loadLatestDrinksActionType,
   drinks,
 });

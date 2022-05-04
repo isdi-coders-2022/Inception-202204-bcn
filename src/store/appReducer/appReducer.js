@@ -1,21 +1,26 @@
-import DrinkActionTypes from "../actions/newDrinkActionType";
+import {
+  addDrinkActionType,
+  loadLatestDrinksActionType,
+  loadMostPopularDrinksActionType,
+  loadNonAlcoholicDrinksActionType,
+} from "../actions/newDrinkActionType";
 
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case DrinkActionTypes.loadAlcoholicDrinksActionType:
+    case addDrinkActionType:
       newState = { ...currentState, alcoholicDrinks: action.drinks };
       break;
 
-    case DrinkActionTypes.loadNonAlcoholicDrinksActionType:
+    case loadNonAlcoholicDrinksActionType:
       newState = { ...currentState, nonAlcoholicDrinks: action.drinks };
       break;
 
-    case DrinkActionTypes.loadMostPopularDrinksActionType:
+    case loadMostPopularDrinksActionType:
       newState = { ...currentState, mostPopularDrinks: action.drinks };
       break;
 
-    case DrinkActionTypes.loadLatestDrinksActionType:
+    case loadLatestDrinksActionType:
       newState = { ...currentState, latestDrinks: action.drinks };
       break;
 
