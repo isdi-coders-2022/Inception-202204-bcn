@@ -10,7 +10,7 @@ const Navbar = () => {
       <Link to="main-page">
         <img src="/images/home_icon.svg" alt="" />
       </Link>
-      <Link to="formulary">
+      <Link to="drink-modification">
         <img src="/images/add_icon.svg" alt="" />
       </Link>
     </NavbarStyles>
