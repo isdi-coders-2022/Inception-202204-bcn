@@ -20,7 +20,7 @@ export const editDrinkActionCreation = (id) => ({
   id,
 });
 
-export const loadDrinkActinCreation = (id) => ({
+export const loadDrinkActionCreation = (id) => ({
   type: loadDrinkActionType,
   id,
 });
