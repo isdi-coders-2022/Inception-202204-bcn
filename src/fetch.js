@@ -7,7 +7,6 @@ const Fetch = () => {
     return drinksFullData;
   };
   const result = getDrinkList();
-  console.log(result);
 };
 
 export default Fetch;
