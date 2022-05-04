@@ -5,7 +5,7 @@ const MainDrinkFilter = ({ text, image, actionOnClick }) => {
   return (
     <MainDrinkFilterStyles>
       <Link to="list-page">
-        <div onClick={actionOnClick}>
+        <div>
           <img src={image} alt={`link to ${text} cocktails`} />
           <div className="fading">
             <p>{text}</p>

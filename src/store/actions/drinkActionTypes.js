@@ -1,4 +1,8 @@
-export const deleteDrinkActionType = "delete-drink";
-export const addDrinkActionType = "add-drink";
-export const editDrinkActionType = "edit-drink";
-export const loadDrinkActionType = "load-drink";
+const DrinkActionTypes = {
+  deleteDrinkActionType: "delete-drink",
+  addDrinkActionType: "add-drink",
+  editDrinkActionType: "edit-drink",
+  loadDrinksActionType: "load-drinks",
+};
+
+export default DrinkActionTypes;

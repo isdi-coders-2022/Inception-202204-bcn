@@ -1,21 +1,15 @@
+import { useContext } from "react";
 import SingleDrink from "../../components/SingleDrink/SingleDrink";
-import Fetch from "../../fetch";
+import AppContext from "../../store/context/AppContext";
 import ListPageStyles from "./ListPageStyles";
 
 const ListPage = ({ items, buttonSource, buttonAction }) => {
-  Fetch();
+  const { drinksData } = useContext(AppContext);
   return (
     <ListPageStyles>
       <ol>
-        {items.map((item, index) => {
-          return (
-            <SingleDrink
-              item={item}
-              key={index}
-              buttonSource={buttonSource}
-              buttonAction={buttonAction}
-            />
-          );
+        {drinksData.map((drink) => {
+          return <SingleDrink item={drink} key={drink.idDrink} />;
         })}
       </ol>
     </ListPageStyles>

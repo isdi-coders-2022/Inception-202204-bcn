@@ -8,15 +8,6 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import FormPage from "./pages/FormPage/FormPage";
 
 function App() {
-  const drinks = [
-    {
-      strDrink: "Margarita",
-      strCategory: "Alcoholic",
-      strDrinkThumb:
-        "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-    },
-  ];
-
   return (
     <>
       <AppStyles />
@@ -25,16 +16,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/main-page" element={<Navigate replace to="/" />} />
         <Route exact path="/drink-modification" element={<FormPage />} />
-        <Route
-          exact
-          path="/list-page"
-          element={
-            <ListPage
-              items={drinks}
-              buttonSource="/images/favourites_icon.png"
-            />
-          }
-        />
+        <Route exact path="/list-page" element={<ListPage />} />
         <Route path="*" element={<MainPage />} />
       </Routes>
       <Navbar />
