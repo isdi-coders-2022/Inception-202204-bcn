@@ -1,12 +1,12 @@
 const Fetch = () => {
-  const getPokemonList = async (tag) => {
+  const getDrinkList = async (tag) => {
     const response = await fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
     );
-    const pokemonFullData = await response.json();
-    return pokemonFullData;
+    const drinksFullData = await response.json();
+    return drinksFullData;
   };
-  const result = getPokemonList();
+  const result = getDrinkList();
   console.log(result);
 };
 
