@@ -1,12 +1,11 @@
 const Fetch = () => {
-  const getDrinkList = async (tag) => {
+  const getDrinkList = async () => {
     const response = await fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
     );
-    const drinksFullData = await response.json();
-    return drinksFullData;
+    return await response.json();
   };
-  const result = getDrinkList();
+  getDrinkList();
 };
 
 export default Fetch;
