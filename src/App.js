@@ -37,7 +37,7 @@ function App() {
       <AppStyles />
       <Header />
       <Routes>
-        <Route path="/" element={<DetailPage drink={drink} />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/main-page" element={<MainPage />} />
         <Route path="/formulary" element={<FormPage />} />
         <Route
