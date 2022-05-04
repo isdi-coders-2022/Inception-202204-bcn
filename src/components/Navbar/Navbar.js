@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <NavbarStyles>
       <Link to="list-page">
-        <img src="/images/favourites_icon.svg" alt="" />
+        <img src="/images/favourites_icon.png" alt="" />
       </Link>
       <Link to="main-page">
         <img src="/images/home_icon.svg" alt="" />
