@@ -10,9 +10,7 @@ const ListPageStyles = styled.div`
   ol {
     list-style: none;
     padding: 0;
-    li {
-      padding-bottom: 30px;
-    }
+    padding-bottom: 60px;
   }
 `;
 

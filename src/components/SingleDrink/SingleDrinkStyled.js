@@ -12,6 +12,7 @@ const SingleDrinkStyled = styled.li`
   border: none;
   overflow: hidden;
   padding: 5px;
+  margin: 25px;
 
   .drink-image {
     width: 100px;
@@ -31,7 +32,7 @@ const SingleDrinkStyled = styled.li`
 
   h2 {
     color: white;
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
   p {
