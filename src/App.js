@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import MainPage from "./pages/MainPage/MainPage";
 import ListPage from "./pages/ListPage/ListPage";
 import { Route, Routes } from "react-router-dom";
+import FormPage from "./pages/FormPage/FormPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/main-page" element={<MainPage />} />
+        <Route path="/formulary" element={<FormPage />} />
         <Route
           path="/list-page"
           element={
