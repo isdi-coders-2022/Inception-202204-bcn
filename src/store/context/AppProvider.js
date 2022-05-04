@@ -1,18 +1,26 @@
 import { useEffect, useReducer } from "react";
-import { loadDrinkActinCreation } from "../actions/DrinkActionCreator";
+import { loadAlcoholicDrinksActionCreation } from "../actions/DrinkActionCreator";
 import appReducer from "../appReducer/appReducer";
 import AppContext from "./AppContext";
 
 const AppProvider = ({ children }) => {
-  const [drinksData, dispatch] = useReducer(appReducer, []);
+  const dataBase = {
+    alcoholicDrinks: [],
+    nonAlcoholicDrinks: [],
+    mostPopularDrinks: [],
+    latestDrinks: [],
+  };
+
+  const [drinksData, dispatch] = useReducer(appReducer, dataBase);
 
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`
       );
       let drinksData = await response.json();
-      dispatch(loadDrinkActinCreation(drinksData.drinks));
+
+      dispatch(loadAlcoholicDrinksActionCreation(drinksData.drinks));
     })();
   }, []);
 

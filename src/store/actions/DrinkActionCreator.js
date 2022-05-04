@@ -15,7 +15,22 @@ export const editDrinkActionCreation = (drink) => ({
   drink,
 });
 
-export const loadDrinkActinCreation = (drinks) => ({
-  type: DrinkActionTypes.loadDrinksActionType,
+export const loadAlcoholicDrinksActionCreation = (drinks) => ({
+  type: DrinkActionTypes.loadAlcoholicDrinksActionType,
+  drinks,
+});
+
+export const loadNonAlcoholicDrinksActionCreation = (drinks) => ({
+  type: DrinkActionTypes.loadNonAlcoholicDrinksActionType,
+  drinks,
+});
+
+export const loadMostPopularActionCreation = (drinks) => ({
+  type: DrinkActionTypes.loadMostPopularDrinksActionType,
+  drinks,
+});
+
+export const loadLatestDrinksActionCreation = (drinks) => ({
+  type: DrinkActionTypes.loadLatestDrinksActionType,
   drinks,
 });

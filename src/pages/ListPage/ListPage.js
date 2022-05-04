@@ -5,10 +5,11 @@ import ListPageStyles from "./ListPageStyles";
 
 const ListPage = ({ items, buttonSource, buttonAction }) => {
   const { drinksData } = useContext(AppContext);
+
   return (
     <ListPageStyles>
       <ol>
-        {drinksData.map((drink) => {
+        {drinksData.alcoholicDrinks.map((drink) => {
           return <SingleDrink item={drink} key={drink.idDrink} />;
         })}
       </ol>
