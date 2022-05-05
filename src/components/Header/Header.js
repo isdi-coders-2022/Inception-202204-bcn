@@ -4,10 +4,10 @@ const Header = () => {
   return (
     <HeaderStyles>
       <div className="info__header">
-        <img src="/images/logo-supersimple.png" alt="Logotipo " />
+        <img src="/images/logo-supersimple.png" alt="logo" />
         <div className="seacher">
           <p>Search Cocktail:</p>
-          <input type="text" />
+          <input title="serch-coctail" type="text" />
         </div>
       </div>
     </HeaderStyles>
