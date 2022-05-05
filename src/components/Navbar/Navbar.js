@@ -4,7 +4,7 @@ import NavbarStyles from "./NavbarStyles";
 const Navbar = () => {
   return (
     <NavbarStyles>
-      <Link to="list-page">
+      <Link to="/user-page">
         <img src="/images/favourites_icon.png" alt="" />
       </Link>
       <Link to="main-page">
