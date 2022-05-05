@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MainDrinkFilterStyles from "./MainDrinkFilterStyled";
 
-const MainDrinkFilter = ({ text, image, actionOnClick }) => {
+const MainDrinkFilter = ({ text, image }) => {
   return (
     <MainDrinkFilterStyles>
       <Link to="list-page">
