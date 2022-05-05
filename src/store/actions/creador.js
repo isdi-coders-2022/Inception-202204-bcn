@@ -6,6 +6,7 @@ import {
   loadLatestDrinksActionType,
   loadMostPopularDrinksActionType,
   loadNonAlcoholicDrinksActionType,
+  loadUserDrinkActionType,
 } from "./newDrinkActionType";
 
 export const addDrinkActionCreation = (drink) => ({
@@ -40,5 +41,10 @@ export const loadMostPopularActionCreation = (drinks) => ({
 
 export const loadLatestDrinksActionCreation = (drinks) => ({
   type: loadLatestDrinksActionType,
+  drinks,
+});
+
+export const loadUserDrinksActionCreation = (drinks) => ({
+  type: loadUserDrinkActionType,
   drinks,
 });

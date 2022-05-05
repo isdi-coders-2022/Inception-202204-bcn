@@ -4,13 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AppProvider from "./store/context/AppProvider";
+import AppProviderLocal from "./store/context/AppProviderLocal";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AppProvider>
-        <App />
+        <AppProviderLocal>
+          <App />
+        </AppProviderLocal>
       </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
