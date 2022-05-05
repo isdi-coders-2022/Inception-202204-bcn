@@ -25,7 +25,7 @@ const appReducer = (currentState, action) => {
       break;
 
     default:
-      newState = [...currentState];
+      newState = { ...currentState };
   }
   return newState;
 };
