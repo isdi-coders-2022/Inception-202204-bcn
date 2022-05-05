@@ -11,6 +11,7 @@ const ListPage = () => {
   useEffect(() => {
     loadPageList();
   }, [loadPageList]);
+
   const button = "/images/favourites_icon.png";
 
   return (
@@ -22,6 +23,7 @@ const ListPage = () => {
               item={drink}
               key={drink.idDrink}
               buttonSource={button}
+              buttonAction={"add"}
             />
           );
         })}

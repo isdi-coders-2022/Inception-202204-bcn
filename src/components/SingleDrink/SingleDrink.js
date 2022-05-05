@@ -2,7 +2,12 @@ import Button from "../Button/Button";
 import SingleDrinkStyled from "./SingleDrinkStyled";
 
 const SingleDrink = ({
-  item: { strDrink: name, strCategory: category, strDrinkThumb: image },
+  item: {
+    strDrink: name,
+    strCategory: category,
+    strDrinkThumb: image,
+    idDrink: id,
+  },
   action,
   buttonAction,
   buttonSource,
@@ -20,6 +25,7 @@ const SingleDrink = ({
         altDescription={buttonAltDescription}
         source={buttonSource}
         action={buttonAction}
+        id={id}
       />
     </SingleDrinkStyled>
   );

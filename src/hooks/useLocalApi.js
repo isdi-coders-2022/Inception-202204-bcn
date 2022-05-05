@@ -12,7 +12,37 @@ const useLocalApi = () => {
     return drinksData;
   }, [dispatch]);
 
-  return { loadUserPageList };
+  const addToFavorites = useCallback(async (id) => {
+    let addedDrink;
+    const response = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+    );
+    let drinkData = await response.json();
+    addedDrink = drinkData.drinks;
+    const objectDrink = addedDrink[0];
+    const currentid = objectDrink.idDrink;
+    const addedIdDrink = { ...objectDrink, id: currentid };
+
+    // eslint-disable-next-line no-unused-vars
+    const saveDrink = await fetch("https://drinks-api.onrender.com/drinks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addedIdDrink),
+    });
+  }, []);
+
+  const deleteUserDrink = useCallback(async (id) => {
+    await fetch(`https://drinks-api.onrender.com/drinks/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }, []);
+
+  return { loadUserPageList, addToFavorites, deleteUserDrink };
 };
 
 export default useLocalApi;
