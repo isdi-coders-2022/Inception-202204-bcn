@@ -3,6 +3,7 @@ import {
   loadLatestDrinksActionType,
   loadMostPopularDrinksActionType,
   loadNonAlcoholicDrinksActionType,
+  loadUserDrinkActionType,
 } from "../actions/newDrinkActionType";
 
 const appReducer = (currentState, action) => {
@@ -22,6 +23,10 @@ const appReducer = (currentState, action) => {
 
     case loadLatestDrinksActionType:
       newState = { ...currentState, latestDrinks: action.drinks };
+      break;
+
+    case loadUserDrinkActionType:
+      newState = { ...currentState, drinks: action.drinks };
       break;
 
     default:
