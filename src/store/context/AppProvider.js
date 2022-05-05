@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from "react";
-import { loadAlcoholicDrinksActionCreation } from "../actions/DrinkActionCreator";
+import { loadAlcoholicDrinksActionCreation } from "../actions/creador";
 import appReducer from "../appReducer/appReducer";
 import AppContext from "./AppContext";
 
