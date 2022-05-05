@@ -11,12 +11,19 @@ const ListPage = () => {
   useEffect(() => {
     loadPageList();
   }, [loadPageList]);
+  const button = "/images/favourites_icon.png";
 
   return (
     <ListPageStyles>
       <ol>
         {drinksData.alcoholicDrinks.map((drink) => {
-          return <SingleDrink item={drink} key={drink.idDrink} />;
+          return (
+            <SingleDrink
+              item={drink}
+              key={drink.idDrink}
+              buttonSource={button}
+            />
+          );
         })}
       </ol>
     </ListPageStyles>

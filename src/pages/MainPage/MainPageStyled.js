@@ -8,6 +8,7 @@ const MainPageStyled = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-bottom: 100px;
 `;
 
 export default MainPageStyled;

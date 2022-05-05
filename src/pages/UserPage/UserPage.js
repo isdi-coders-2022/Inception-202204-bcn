@@ -12,6 +12,8 @@ const UserPage = () => {
     loadUserPageList();
   }, [loadUserPageList]);
 
+  const button = "/images/delete_icon.svg";
+
   return (
     <UserPageStyles>
       <ol>
