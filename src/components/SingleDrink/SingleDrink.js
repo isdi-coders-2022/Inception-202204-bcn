@@ -8,9 +8,10 @@ const SingleDrink = ({
   buttonSource,
   buttonAltDescription,
 }) => {
+  const goodImage = `${image}/preview`;
   return (
     <SingleDrinkStyled onClick={action}>
-      <img className="drink-image" src={image} alt={name} />
+      <img className="drink-image" src={goodImage} alt={name} />
       <div className="drink-info">
         <h2 className="drink-name">{name}</h2>
         <p className="drink-category">{category}</p>
