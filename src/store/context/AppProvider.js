@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   };
 
   let [drinksData, dispatch] = useReducer(appReducer, dataBase);
+  const patata = "?";
 
   useEffect(() => {
     (async () => {
