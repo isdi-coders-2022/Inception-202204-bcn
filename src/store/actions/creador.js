@@ -1,6 +1,7 @@
 import {
   addDrinkActionType,
   deleteDrinkActionType,
+  deleteUserDrinkActionType,
   editDrinkActionType,
   loadAlcoholicDrinksActionType,
   loadLatestDrinksActionType,
@@ -47,4 +48,9 @@ export const loadLatestDrinksActionCreation = (drinks) => ({
 export const loadUserDrinksActionCreation = (drinks) => ({
   type: loadUserDrinkActionType,
   drinks,
+});
+
+export const deleteUserDrinksActionCreation = (id) => ({
+  type: deleteUserDrinkActionType,
+  id,
 });
