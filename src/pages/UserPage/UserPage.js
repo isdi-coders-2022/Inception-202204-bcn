@@ -1,19 +1,18 @@
 import { useContext } from "react";
 import SingleDrink from "../../components/SingleDrink/SingleDrink";
 import AppContext from "../../store/context/AppContext";
-import ListPageStyles from "./ListPageStyles";
+import UserPageStyles from "./UserPageStyles";
 
-const ListPage = () => {
+const UserPage = () => {
   const { drinksData } = useContext(AppContext);
   return (
-    <ListPageStyles>
+    <UserPageStyles>
       <ol>
         {drinksData.alcoholicDrinks.map((drink) => {
           return <SingleDrink item={drink} key={drink.idDrink} />;
         })}
       </ol>
-    </ListPageStyles>
+    </UserPageStyles>
   );
 };
-
-export default ListPage;
+export default UserPage;

@@ -1,5 +1,5 @@
 import {
-  addDrinkActionType,
+  loadAlcoholicDrinksActionType,
   loadLatestDrinksActionType,
   loadMostPopularDrinksActionType,
   loadNonAlcoholicDrinksActionType,
@@ -8,7 +8,7 @@ import {
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case addDrinkActionType:
+    case loadAlcoholicDrinksActionType:
       newState = { ...currentState, alcoholicDrinks: action.drinks };
       break;
 

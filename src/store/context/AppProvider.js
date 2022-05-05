@@ -19,7 +19,6 @@ const AppProvider = ({ children }) => {
         `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`
       );
       let drinksData = await response.json();
-
       dispatch(loadAlcoholicDrinksActionCreation(drinksData.drinks));
     })();
   }, []);

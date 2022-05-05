@@ -6,6 +6,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import ListPage from "./pages/ListPage/ListPage";
 import { Route, Routes, Navigate } from "react-router-dom";
 import FormPage from "./pages/FormPage/FormPage";
+import UserPage from "./pages/UserPage/UserPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/main-page" element={<Navigate replace to="/" />} />
         <Route exact path="/drink-modification" element={<FormPage />} />
         <Route exact path="/list-page" element={<ListPage />} />
+        <Route exact path="/user-page" element={<UserPage />} />
         <Route path="*" element={<MainPage />} />
       </Routes>
       <Navbar />
