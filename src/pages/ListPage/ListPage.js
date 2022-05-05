@@ -11,6 +11,7 @@ const ListPage = () => {
   useEffect(() => {
     loadPageList();
   }, [loadPageList]);
+
   const button = "/images/favourites_icon.png";
 
   return (

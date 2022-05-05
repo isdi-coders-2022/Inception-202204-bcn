@@ -23,6 +23,7 @@ const useLocalApi = () => {
     const currentid = objectDrink.idDrink;
     const addedIdDrink = { ...objectDrink, id: currentid };
 
+    // eslint-disable-next-line no-unused-vars
     const saveDrink = await fetch("https://drinks-api.onrender.com/drinks", {
       method: "POST",
       headers: {
