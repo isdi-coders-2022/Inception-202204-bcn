@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import SingleDrink from "../../components/SingleDrink/SingleDrink";
-import AppContext from "../../store/context/AppContext";
+import AppContextLocal from "../../store/context/AppContextLocal";
 import UserPageStyles from "./UserPageStyles";
 
 const UserPage = () => {
-  const { drinksData } = useContext(AppContext);
+  const { drinksData } = useContext(AppContextLocal);
   return (
     <UserPageStyles>
       <ol>
-        {drinksData.alcoholicDrinks.map((drink) => {
+        {drinksData.drinks.map((drink) => {
           return <SingleDrink item={drink} key={drink.idDrink} />;
         })}
       </ol>

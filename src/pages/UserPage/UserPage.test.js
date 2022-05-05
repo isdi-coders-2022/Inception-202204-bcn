@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import AppContext from "../../store/context/AppContext";
+import AppContextLocal from "../../store/context/AppContextLocal";
 import UserPage from "./UserPage";
 
 describe("Given UserPage component", () => {
   describe("When instantiated", () => {
     test("Then it should create 3 list items", () => {
       const drinksData = {
-        alcoholicDrinks: [
+        drinks: [
           {
             strDrink: "Afterglow",
             strDrinkThumb:
@@ -32,9 +32,9 @@ describe("Given UserPage component", () => {
 
       render(
         <BrowserRouter>
-          <AppContext.Provider value={{ drinksData }}>
+          <AppContextLocal.Provider value={{ drinksData }}>
             <UserPage />
-          </AppContext.Provider>
+          </AppContextLocal.Provider>
         </BrowserRouter>
       );
       const listedElements = screen.getAllByRole("listitem");
