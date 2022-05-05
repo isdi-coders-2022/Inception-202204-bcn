@@ -22,6 +22,7 @@ const ListPage = () => {
               item={drink}
               key={drink.idDrink}
               buttonSource={button}
+              buttonAction={"add"}
             />
           );
         })}
