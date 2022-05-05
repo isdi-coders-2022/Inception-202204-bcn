@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a Header component When it's instantiated Then it should always match this snapshot 1`] = `
+<header
+  className="sc-bczRLJ jJNOkx"
+>
+  <div
+    className="info__header"
+  >
+    <img
+      alt="Logotipo "
+      src="/images/logo-supersimple.png"
+    />
+    <div
+      className="seacher"
+    >
+      <p>
+        Search Cocktail:
+      </p>
+      <input
+        type="text"
+      />
+    </div>
+  </div>
+</header>
+`;
