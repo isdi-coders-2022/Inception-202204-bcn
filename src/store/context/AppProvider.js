@@ -11,7 +11,7 @@ const AppProvider = ({ children }) => {
     latestDrinks: [],
   };
 
-  const [drinksData, dispatch] = useReducer(appReducer, dataBase);
+  let [drinksData, dispatch] = useReducer(appReducer, dataBase);
 
   useEffect(() => {
     (async () => {

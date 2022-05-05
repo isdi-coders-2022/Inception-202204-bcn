@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainDrinkFilterStyles = styled.li`
+const MainDrinkFilterStyled = styled.li`
   list-style-type: none;
   width: 310px;
   height: 120px;
@@ -29,4 +29,4 @@ const MainDrinkFilterStyles = styled.li`
   }
 `;
 
-export default MainDrinkFilterStyles;
+export default MainDrinkFilterStyled;

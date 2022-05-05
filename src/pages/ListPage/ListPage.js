@@ -3,7 +3,7 @@ import SingleDrink from "../../components/SingleDrink/SingleDrink";
 import AppContext from "../../store/context/AppContext";
 import ListPageStyles from "./ListPageStyles";
 
-const ListPage = ({ items, buttonSource, buttonAction }) => {
+const ListPage = () => {
   const { drinksData } = useContext(AppContext);
 
   return (
