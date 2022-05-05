@@ -3,10 +3,10 @@ import styled from "styled-components";
 const SingleDrinkStyled = styled.li`
   background-color: #3a015c;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
-  width: 310px;
+  width: 80%;
   height: 120px;
   border-radius: 20px;
   border: none;
@@ -15,10 +15,11 @@ const SingleDrinkStyled = styled.li`
   margin: 25px;
 
   .drink-image {
-    width: 100px;
-    height: 100px;
+    width: 40%;
+    height: 90%;
     border-radius: 15px;
     margin: 5px;
+    object-fit: cover;
   }
   .drink-info {
     display: flex;
@@ -32,13 +33,20 @@ const SingleDrinkStyled = styled.li`
 
   h2 {
     color: white;
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
 
   p {
     color: #afafaf;
-    font-size: 1.2em;
+    font-size: 1rem;
     padding: 5px 0;
+  }
+  button {
+    background: none;
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;
 
