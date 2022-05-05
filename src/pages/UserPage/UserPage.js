@@ -5,7 +5,6 @@ import UserPageStyles from "./UserPageStyles";
 
 const UserPage = () => {
   const { drinksData } = useContext(AppContextLocal);
-  debugger;
   return (
     <UserPageStyles>
       <ol>
