@@ -16,7 +16,13 @@ const UserPage = () => {
     <UserPageStyles>
       <ol>
         {drinksData.drinks.map((drink) => {
-          return <SingleDrink item={drink} key={drink.idDrink} />;
+          return (
+            <SingleDrink
+              item={drink}
+              key={drink.idDrink}
+              buttonAction={"delete"}
+            />
+          );
         })}
       </ol>
     </UserPageStyles>

@@ -1,5 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useCallback, useContext } from "react";
-import { loadUserDrinksActionCreation } from "../store/actions/creador";
+import {
+  deleteUserDrinksActionCreation,
+  loadUserDrinksActionCreation,
+} from "../store/actions/creador";
 import AppContextLocal from "../store/context/AppContextLocal";
 
 const useLocalApi = () => {
@@ -12,7 +16,13 @@ const useLocalApi = () => {
     return drinksData;
   }, [dispatch]);
 
-  return { loadUserPageList };
+  const deleteUserDrink = useCallback(async (idDrink) => {
+    await fetch(`https://drinks-api.onrender.com/drinks/?idDrink=${idDrink}`, {
+      method: "DELETE",
+    });
+  }, []);
+
+  return { loadUserPageList, deleteUserDrink };
 };
 
 export default useLocalApi;

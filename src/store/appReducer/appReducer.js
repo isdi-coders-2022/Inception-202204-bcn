@@ -1,4 +1,5 @@
 import {
+  deleteUserDrinkActionType,
   loadAlcoholicDrinksActionType,
   loadLatestDrinksActionType,
   loadMostPopularDrinksActionType,
@@ -27,6 +28,10 @@ const appReducer = (currentState, action) => {
 
     case loadUserDrinkActionType:
       newState = { ...currentState, drinks: action.drinks };
+      break;
+
+    case deleteUserDrinkActionType:
+      newState = { ...currentState, id: action.drinks };
       break;
 
     default:
