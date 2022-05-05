@@ -12,11 +12,13 @@ const UserPage = () => {
     loadUserPageList();
   }, [loadUserPageList]);
 
+  const button = "/images/delete_icon.svg";
+
   return (
     <UserPageStyles>
       <ol>
         {drinksData.drinks.map((drink) => {
-          return <SingleDrink item={drink} key={drink.idDrink} />;
+          return <SingleDrink item={drink} key={button} />;
         })}
       </ol>
     </UserPageStyles>

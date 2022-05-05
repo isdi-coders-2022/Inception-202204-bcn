@@ -2,29 +2,38 @@ import styled from "styled-components";
 
 const MainDrinkFilterStyled = styled.li`
   list-style-type: none;
-  width: 310px;
+  width: 80%;
   height: 120px;
   border-radius: 10px;
   border: 1px solid black;
   overflow: hidden;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    .fading {
+      position: absolute;
+      background-color: white;
+      opacity: 0.6;
+      width: 80%;
+    }
+  }
   img {
     width: 100%;
     height: 100%;
-  }
-  .fading {
-    position: relative;
-    top: -230px;
-    background-color: white;
-    opacity: 0.6;
   }
   p {
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    margin: 0px;
     height: 40px;
   }
 `;
