@@ -1,5 +1,4 @@
-import { useEffect, useReducer } from "react";
-import { loadAlcoholicDrinksActionCreation } from "../actions/creador";
+import { useReducer } from "react";
 import appReducer from "../appReducer/appReducer";
 import AppContext from "./AppContext";
 
@@ -12,16 +11,6 @@ const AppProvider = ({ children }) => {
   };
 
   let [drinksData, dispatch] = useReducer(appReducer, dataBase);
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`
-      );
-      let drinksData = await response.json();
-      dispatch(loadAlcoholicDrinksActionCreation(drinksData.drinks));
-    })();
-  }, []);
 
   return (
     <AppContext.Provider value={{ drinksData, dispatch }}>
