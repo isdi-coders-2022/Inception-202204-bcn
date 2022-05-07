@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import SingleDrink from "../../components/SingleDrink/SingleDrink";
+import UserList from "../../components/UserList/UserList";
 import useLocalApi from "../../hooks/useLocalApi";
 import AppContextLocal from "../../store/context/AppContextLocal";
 import UserPageStyles from "./UserPageStyles";
@@ -16,18 +16,11 @@ const UserPage = () => {
 
   return (
     <UserPageStyles>
-      <ol>
-        {drinksData.drinks.map((drink) => {
-          return (
-            <SingleDrink
-              item={drink}
-              key={Math.floor(Math.random() * 1000)}
-              buttonSource={button}
-              buttonAction={"delete"}
-            />
-          );
-        })}
-      </ol>
+      <UserList
+        buttonAction={"delete"}
+        buttonSource={button}
+        drinks={drinksData.drinks}
+      />
     </UserPageStyles>
   );
 };
