@@ -50,7 +50,8 @@
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
-      "!src/reportWebVitals.js"
+      "!src/reportWebVitals.js",
+      "!src/pages/ListPage/__snapshots__/ListPage.test.js.snap"
     ]
   }
 }
