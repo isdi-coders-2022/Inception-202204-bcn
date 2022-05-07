@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import SingleDrink from "../../components/SingleDrink/SingleDrink";
+import List from "../../components/List/List";
 import useApi from "../../hooks/useApi";
 import AppContext from "../../store/context/AppContext";
 import ListPageStyles from "./ListPageStyles";
@@ -16,18 +16,11 @@ const ListPage = () => {
 
   return (
     <ListPageStyles>
-      <ol>
-        {drinksData.alcoholicDrinks.map((drink) => {
-          return (
-            <SingleDrink
-              item={drink}
-              key={drink.idDrink}
-              buttonSource={button}
-              buttonAction={"add"}
-            />
-          );
-        })}
-      </ol>
+      <List
+        buttonAction={"add"}
+        buttonSource={button}
+        drinks={drinksData.alcoholicDrinks}
+      />
     </ListPageStyles>
   );
 };
