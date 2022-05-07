@@ -1,5 +1,4 @@
 import useLocalApi from "../../hooks/useLocalApi";
-import { createDrinkActionCreation } from "../../store/actions/creador";
 import FormularyStyled from "./FormularyStyled";
 
 const Formulary = ({ newDrink }) => {
