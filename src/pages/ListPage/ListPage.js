@@ -21,18 +21,6 @@ const ListPage = () => {
         buttonSource={button}
         drinks={drinksData.alcoholicDrinks}
       />
-      {/*       <ol>
-        {drinksData.alcoholicDrinks.map((drink) => {
-          return (
-            <SingleDrink
-              item={drink}
-              key={drink.idDrink}
-              buttonSource={button}
-              buttonAction={"add"}
-            />
-          );
-        })}
-      </ol> */}
     </ListPageStyles>
   );
 };
