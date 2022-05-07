@@ -1,12 +1,38 @@
 import FormularyStyled from "./FormularyStyled";
 
-const Formulary = () => {
+const Formulary = (newDrink) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const strDrink = event.target.elements.name.value;
+    const strCategory = event.target.elements.category.value;
+    const strAlcoholic = event.target.elements.alcoholic.value;
+    const strGlass = event.target.elements.glass.value;
+    const strInstructions = event.target.elements.instructions.value;
+    const strIngredient1 = event.target.elements.ingredient1.value;
+    const strIngredient2 = event.target.elements.ingredient2.value;
+    const strIngredient3 = event.target.elements.ingredient3.value;
+    const strIngredient4 = event.target.elements.ingredient4.value;
+    const strIngredient5 = event.target.elements.ingredient5.value;
+    newDrink = {
+      strDrink,
+      strCategory,
+      strAlcoholic,
+      strGlass,
+      strInstructions,
+      strIngredient1,
+      strIngredient2,
+      strIngredient3,
+      strIngredient4,
+      strIngredient5,
+    };
+  };
+
   return (
-    <FormularyStyled>
+    <FormularyStyled onSubmit={handleSubmit}>
       <label>
         Cocktail name
         <br />
-        <input type="text" name="" autocomplete="off" required></input>
+        <input type="text" name="name" autoComplete="off" required></input>
       </label>
       <label>
         Type of drink
@@ -46,8 +72,8 @@ const Formulary = () => {
         Preparation
         <br />
         <textarea
-          name="Instructions"
-          autocomplete="off"
+          name="instructions"
+          autoComplete="off"
           placeholder="Cocktail Instructions"
           required
           rows="7"
@@ -57,7 +83,7 @@ const Formulary = () => {
       <label>
         Ingredient 1
         <br />
-        <select name="Ingredient1">
+        <select name="ingredient1">
           <option></option>
           <option value="Angostura">Angostura</option>
           <option value="Cognac">Cognac</option>
@@ -71,7 +97,7 @@ const Formulary = () => {
       </label>
       <label>
         Ingredient 2<br />
-        <select name="Ingredient2">
+        <select name="ingredient2">
           <option></option>
           <option value="Sweet Vermouth">Sweet Vermouth</option>
           <option value="Dry Vermouth">Dry Vermouth</option>
@@ -84,7 +110,7 @@ const Formulary = () => {
       </label>
       <label>
         Ingredient 3 <br />
-        <select name="Ingredient3">
+        <select name="ingredient3">
           <option></option>
           <option value="">Grenadine</option>
           <option value="">Lemon juice</option>
@@ -100,7 +126,7 @@ const Formulary = () => {
       </label>
       <label>
         Ingredient 4<br />
-        <select name="Ingredient4">
+        <select name="ingredient4">
           <option></option>
           <option value="Apple juice">Apple juice</option>
           <option value="Milk">Milk</option>
@@ -116,7 +142,7 @@ const Formulary = () => {
       </label>
       <label>
         Ingredient 5<br />
-        <select name="Ingredient5">
+        <select name="ingredient5">
           <option></option>
           <option value="Cream">Cream</option>
           <option value="Cubes ice">Cubes ice</option>
