@@ -1,7 +1,7 @@
 import useLocalApi from "../../hooks/useLocalApi";
 import FormularyStyled from "./FormularyStyled";
 
-const Formulary = ({ newDrink }) => {
+const Formulary = () => {
   const { createFavourites } = useLocalApi();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +21,7 @@ const Formulary = ({ newDrink }) => {
     window.crypto.getRandomValues(randomId);
     const idDrink = randomId[0];
 
-    newDrink = {
+    const newDrink = {
       idDrink,
       strDrink,
       strCategory,
