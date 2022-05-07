@@ -32,6 +32,17 @@ const useLocalApi = () => {
     });
   }, []);
 
+  const createFavourites = useCallback(async (addedDrink) => {
+    const addedIdDrink = { ...addedDrink, id: addedDrink.idDrink };
+    await fetch("https://drinks-api.onrender.com/drinks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addedIdDrink),
+    });
+  }, []);
+
   const deleteUserDrink = useCallback(async (id) => {
     await fetch(`https://drinks-api.onrender.com/drinks/${id}`, {
       method: "DELETE",
@@ -41,7 +52,12 @@ const useLocalApi = () => {
     });
   }, []);
 
-  return { loadUserPageList, addToFavorites, deleteUserDrink };
+  return {
+    loadUserPageList,
+    addToFavorites,
+    deleteUserDrink,
+    createFavourites,
+  };
 };
 
 export default useLocalApi;

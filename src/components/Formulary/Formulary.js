@@ -1,6 +1,8 @@
+import useLocalApi from "../../hooks/useLocalApi";
 import FormularyStyled from "./FormularyStyled";
 
-const Formulary = (newDrink) => {
+const Formulary = ({ newDrink }) => {
+  const { createFavourites } = useLocalApi();
   const handleSubmit = (event) => {
     event.preventDefault();
     const strDrink = event.target.elements.name.value;
@@ -13,7 +15,14 @@ const Formulary = (newDrink) => {
     const strIngredient3 = event.target.elements.ingredient3.value;
     const strIngredient4 = event.target.elements.ingredient4.value;
     const strIngredient5 = event.target.elements.ingredient5.value;
+    const strDrinkThumb = event.target.elements.urlImage.value;
+
+    const randomId = new Uint32Array(1);
+    window.crypto.getRandomValues(randomId);
+    const idDrink = randomId[0];
+
     newDrink = {
+      idDrink,
       strDrink,
       strCategory,
       strAlcoholic,
@@ -24,9 +33,10 @@ const Formulary = (newDrink) => {
       strIngredient3,
       strIngredient4,
       strIngredient5,
+      strDrinkThumb,
     };
+    createFavourites(newDrink);
   };
-
   return (
     <FormularyStyled onSubmit={handleSubmit}>
       <label>
@@ -112,16 +122,16 @@ const Formulary = (newDrink) => {
         Ingredient 3 <br />
         <select name="ingredient3">
           <option></option>
-          <option value="">Grenadine</option>
-          <option value="">Lemon juice</option>
-          <option value="">Lime juice</option>
-          <option value="">Orange juice</option>
-          <option value="">Pineapple juice</option>
-          <option value="">Soda water</option>
-          <option value="">Sprite</option>
-          <option value="">Sugar syrup</option>
-          <option value="">Sweet Vermouth</option>
-          <option value="">Tonic water</option>
+          <option value="Grenadine">Grenadine</option>
+          <option value="Lemon juice">Lemon juice</option>
+          <option value="Lime juice">Lime juice</option>
+          <option value="Orange juice">Orange juice</option>
+          <option value="Pineapple juice">Pineapple juice</option>
+          <option value="Soda water">Soda water</option>
+          <option value="Sprite">Sprite</option>
+          <option value="Sugar syrup">Sugar syrup</option>
+          <option value="Sweet Vermouth">Sweet Vermouth</option>
+          <option value="Tonic water">Tonic water</option>
         </select>
       </label>
       <label>
@@ -153,6 +163,11 @@ const Formulary = (newDrink) => {
           <option value="Mint">Mint</option>
           <option value="Vanilla extract">Vanilla extract</option>
         </select>
+      </label>
+      <label>
+        Url Image
+        <br />
+        <input type="text" name="urlImage" autoComplete="off"></input>
       </label>
       <button type="submit" value="Save Cocktail">
         Save Cocktail
