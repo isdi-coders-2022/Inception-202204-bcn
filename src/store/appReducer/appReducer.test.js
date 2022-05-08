@@ -79,4 +79,21 @@ describe("Given an appReducer function", () => {
       expect(drinksData.drinks).toBe(newCocktail);
     });
   });
+
+  describe("When it receives a 'fakeActionCreation' action", () => {
+    test("Then it should pass throught default case", () => {
+      const fakeActionType = "fake-action";
+      const fakeActionCreation = (drink) => ({
+        type: fakeActionType,
+        drink,
+      });
+
+      let dataBase = { drinks: [] };
+      const actionToTest = fakeActionCreation(newCocktail);
+
+      const drinksData = appReducer(dataBase, actionToTest);
+
+      expect(drinksData).toMatchObject(dataBase);
+    });
+  });
 });
