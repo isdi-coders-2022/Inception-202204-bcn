@@ -17,9 +17,7 @@ const Formulary = () => {
     const strIngredient5 = event.target.elements.ingredient5.value;
     const strDrinkThumb = event.target.elements.urlImage.value;
 
-    const randomId = new Uint32Array(1);
-    window.crypto.getRandomValues(randomId);
-    const idDrink = randomId[0];
+    const idDrink = Math.floor(Math.random() * 1000);
 
     const newDrink = {
       idDrink,
