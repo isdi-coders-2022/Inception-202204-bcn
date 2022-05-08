@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given ListPage component When rendered Then it should always match this snapshot 1`] = `
+<div
+  className="sc-dkzDqf dcbHtU"
+>
+  <ol />
+</div>
+`;
