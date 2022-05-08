@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FormularyStyled = styled.form`
+const FormularyStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
