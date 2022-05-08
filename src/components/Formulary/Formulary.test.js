@@ -5,26 +5,6 @@ import AppProviderLocal from "../../store/context/AppProviderLocal";
 import Formulary from "./Formulary";
 import FormularyStyled from "./FormularyStyled";
 
-/*   
-  describe("", () => {
-
-  describe('SomeComponent' () => {
-  test('validates model on button click', () => {
-      const handleSubmit = jest.fn();
-      const wrapper = mount(
-          <Login handleSubmit={handleSubmit}/>
-      );
-      const instance = wrapper.instance();
-      const submitBtn = app.find('#sign-in')
-      submitBtn.simulate('click')
-      expect(handleSubmit).toHaveBeenCalled();
-    });
-  }
-
-
-  })
- */
-
 describe("Given a formulary component", () => {
   describe("When the button submit is preset", () => {
     test("Then it's ben called", () => {
