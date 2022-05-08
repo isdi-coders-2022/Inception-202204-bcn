@@ -13,7 +13,10 @@ const SingleDrink = ({
   buttonSource,
   buttonAltDescription,
 }) => {
-  const goodImage = `${image}/preview`;
+  let goodImage = `${image}`;
+  if (image.includes("https://www.thecocktaildb.com/")) {
+    goodImage = `${image}/preview`;
+  }
   return (
     <SingleDrinkStyled onClick={action}>
       <img className="drink-image" src={goodImage} alt={name} />
